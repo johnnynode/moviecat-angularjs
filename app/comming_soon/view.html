@@ -1,0 +1,17 @@
+<h1 class="page-header">{{title}}</h1>
+<ul class="list-group">
+  <a class="list-group-item" ng-repeat="m in movies track by $index" href='#'>
+		<div class="media">
+		  <div class="media-left">
+	      <img class="media-object" ng-src="{{m.images.small}}" alt="{{m.title}}">
+		  </div>
+		  <div class="media-body">
+		  	<span class="badge pull-right">{{m.collect_count}}</span>
+		    <h3 class="media-heading">{{m.title}}</h3>
+		    <p>类型：<span>{{m.genres.join('、')}}</span>&nbsp;&nbsp;上映年份：<span>{{m.year}}</span></p>
+		    <p>导演：<span ng-repeat='d in m.directors'>{{d.name}}{{$last?'':'、'}}</span></p>
+		    <p>主演：<span ng-repeat='c in m.casts'>{{c.name}}{{$last?'':'、'}}</span></p>
+		  </div>
+		</div>
+  </a>
+</ul>

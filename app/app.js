@@ -4,9 +4,7 @@
 	angular.module('moviecat', [
 		'ngRoute',
 		'moviecat.directives.auto-active',
-		'moviecat.in_theaters',
-		'moviecat.coming_soon',
-		'moviecat.top250'
+		'moviecat.movie_list'
 	])
 		.config(['$routeProvider', function($routeProvider){
 		  $routeProvider.otherwise({redirectTo: '/in_theaters'});

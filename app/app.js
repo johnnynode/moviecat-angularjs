@@ -20,7 +20,8 @@
 					$scope.search = function () {
 						// 针对 detail详情模块 进行判断
 						if (!$routeParams.category) {
-							return $location.path('/search?q=' + $scope.input);
+							$location.path("/search");
+							return $location.search('q',$scope.input);
 						}
 						$route.updateParams({category: 'search', q: $scope.input});
 					};

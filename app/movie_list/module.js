@@ -1,5 +1,6 @@
 (function(angular){
 	'use strict';
+	// 列表页模块
 	angular.module('moviecat.movie_list', ['ngRoute','moviecat.services.http'])
 		.config(['$routeProvider', function($routeProvider) {
 		  $routeProvider.when('/:category/:page?', {
@@ -27,13 +28,13 @@
 					if(0<page && page <= $scope.totalPage){
 						$route.updateParams({page:page});
 					}
-				}
+				};
 				$scope.loading = true;
 				$scope.title = '加载中...';
 				HttpService
 					.jsonp(
 						"http://api.douban.com/v2/movie/" + $routeParams.category,
-						{start:start,count:pageSize},
+						{start:start,count:pageSize,q:$routeParams.q},
 						function(data){
 							$scope.loading = false;
 							$scope.title = data.title;

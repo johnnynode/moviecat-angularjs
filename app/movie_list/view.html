@@ -1,6 +1,6 @@
 <h1 class="page-header">{{title}}</h1>
 <ul class="list-group">
-  <a class="list-group-item" ng-repeat="m in movies track by $index" href='#'>
+  <a class="list-group-item" ng-repeat="m in movies track by $index" ng-href="#/detail/{{m.id}}">
 		<div class="media">
 		  <div class="media-left">
 	      <img class="media-object" ng-src="{{m.images.small}}" alt="{{m.title}}">

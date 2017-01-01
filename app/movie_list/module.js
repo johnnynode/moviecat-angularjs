@@ -1,18 +1,19 @@
 (function(angular){
 	'use strict';
-	angular.module('moviecat.coming_soon', ['ngRoute','moviecat.services.http'])
+	angular.module('moviecat.movie_list', ['ngRoute','moviecat.services.http'])
 		.config(['$routeProvider', function($routeProvider) {
-		  $routeProvider.when('/coming_soon/:page?', {
-		    templateUrl: 'coming_soon/view.html',
-		    controller: 'coming_soon_ctrl'
+		  $routeProvider.when('/:category/:page?', {
+		    templateUrl: 'movie_list/view.html',
+		    controller: 'MovieListCtrl'
 		  });
 		}])
-		.controller('coming_soon_ctrl', [
+		.controller('MovieListCtrl', [
 			'$scope',
 			'$route',
 			'$routeParams',
 			'HttpService',
 			function($scope,$route,$routeParams,HttpService) {
+				// 取得当前页码
 				$scope.page = $routeParams.page-0 ||1;
 				/* 豆瓣api的start参数配置 显示5条记录*/
 				var start = ($scope.page-1) * 5;
@@ -27,12 +28,11 @@
 						$route.updateParams({page:page});
 					}
 				}
-
 				$scope.loading = true;
 				$scope.title = '加载中...';
 				HttpService
 					.jsonp(
-						"http://api.douban.com/v2/movie/coming_soon",
+						"http://api.douban.com/v2/movie/" + $routeParams.category,
 						{start:start,count:pageSize},
 						function(data){
 							$scope.loading = false;

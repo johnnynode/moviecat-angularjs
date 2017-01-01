@@ -4,7 +4,7 @@
 	angular.module('moviecat.movie_detail', ['ngRoute', 'moviecat.services.http'])
 			.config(['$routeProvider', function ($routeProvider) {
 				$routeProvider.when('/detail/:id', {
-					templateUrl: 'movie_detail/view.html',
+					templateUrl: 'movie_detail/view.html?rev=@@hash',
 					controller: 'MovieDetailController'
 				});
 			}])

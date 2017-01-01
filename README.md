@@ -1,8 +1,10 @@
 #  moviecat-angular (MVC小demo)
 
 ### 安装
-$ npm i
-$ bower install
+- $ npm i
+
+### 构建
+- $ gulp
 
 #### 路由设计
 angular中的路由:根据请求的URL来决定执行哪个模块，这个过程叫路由
@@ -38,9 +40,9 @@ angular中的路由:根据请求的URL来决定执行哪个模块，这个过程
 movie_detail模块
 
 ### 2个分支
-before,是在movie_list抽象之前，此时是三大模块,没有电影详情页面，(还未做)
-after, 是代码重用，集成了movie_list和movie_detail
-master 分支是全部完成的分支。
+- before,是在movie_list抽象之前，此时是三大模块,没有电影详情页面，(还未做)
+- after, 是代码重用，集成了movie_list和movie_detail
+- master 分支是全部完成的分支。
 
 ### 其他
 豆瓣API对请求次数有限制

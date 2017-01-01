@@ -5,7 +5,7 @@
 
 /* Move down content because we have a fixed navbar that is 50px tall */
 body {
-  padding-top: 50px;
+	padding-top: 50px;
 }
 
 /*
@@ -13,8 +13,8 @@ body {
  */
 
 .sub-header {
-  padding-bottom: 10px;
-  border-bottom: 1px solid #eee;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #eee;
 }
 
 /*
@@ -22,7 +22,7 @@ body {
  * Hide default border to remove 1px line.
  */
 .navbar-fixed-top {
-  border: 0;
+	border: 0;
 }
 
 /*
@@ -31,102 +31,113 @@ body {
 
 /* Hide for mobile, show later */
 .sidebar {
-  display: none;
+	display: none;
 }
+
 @media (min-width: 768px) {
-  .sidebar {
-    position: fixed;
-    top: 51px;
-    bottom: 0;
-    left: 0;
-    z-index: 1000;
-    display: block;
-    padding: 20px;
-    overflow-x: hidden;
-    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-    background-color: #f5f5f5;
-    border-right: 1px solid #eee;
-  }
+	.sidebar {
+		position: fixed;
+		top: 51px;
+		bottom: 0;
+		left: 0;
+		z-index: 1000;
+		display: block;
+		padding: 20px;
+		overflow-x: hidden;
+		overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+		background-color: #f5f5f5;
+		border-right: 1px solid #eee;
+	}
 }
 
 /* Sidebar navigation */
 .nav-sidebar {
-  margin-right: -21px; /* 20px padding + 1px border */
-  margin-bottom: 20px;
-  margin-left: -20px;
+	margin-right: -21px; /* 20px padding + 1px border */
+	margin-bottom: 20px;
+	margin-left: -20px;
 }
+
 .nav-sidebar > li > a {
-  padding-right: 20px;
-  padding-left: 20px;
+	padding-right: 20px;
+	padding-left: 20px;
 }
+
 .nav-sidebar > .active > a,
 .nav-sidebar > .active > a:hover,
 .nav-sidebar > .active > a:focus {
-  color: #fff;
-  background-color: #428bca;
+	color: #fff;
+	background-color: #428bca;
 }
-
 
 /*
  * Main content
  */
 
 .main {
-  padding: 20px;
-}
-@media (min-width: 768px) {
-  .main {
-    padding-right: 40px;
-    padding-left: 40px;
-  }
-}
-.main .page-header {
-  margin-top: 0;
+	padding: 20px;
 }
 
+@media (min-width: 768px) {
+	.main {
+		padding-right: 40px;
+		padding-left: 40px;
+	}
+}
+
+.main .page-header {
+	margin-top: 0;
+}
 
 /*
  * Placeholder dashboard ideas
  */
 
 .placeholders {
-  margin-bottom: 30px;
-  text-align: center;
+	margin-bottom: 30px;
+	text-align: center;
 }
+
 .placeholders h4 {
-  margin-bottom: 0;
+	margin-bottom: 0;
 }
+
 .placeholder {
-  margin-bottom: 20px;
+	margin-bottom: 20px;
 }
+
 .placeholder img {
-  display: inline-block;
-  border-radius: 50%;
+	display: inline-block;
+	border-radius: 50%;
 }
+
 /* 正在热映 */
 .media {
-  padding: 5px 0;
-  color:#666;
+	padding: 5px 0;
+	color: #666;
 }
-a:hover{
-  text-decoration: none;
+
+a:hover {
+	text-decoration: none;
 }
 
 .media img {
-  height: 120px;
+	height: 120px;
 }
 
 .media p {
-  margin-top: 10px;
-  margin-bottom: 5px;
+	margin-top: 10px;
+	margin-bottom: 5px;
 }
 
 /* loading 动画开始 */
-.loading{
+.loading {
 	position: fixed;
-	z-index:99999;
-	top:0;left:0;bottom:0;right:0;
-	background-color: rgba(0,0,0,.2);
+	z-index: 99999;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, .2);
 }
 
 .sk-folding-cube {
@@ -148,6 +159,7 @@ a:hover{
 	-ms-transform: scale(1.1);
 	transform: scale(1.1);
 }
+
 .sk-folding-cube .sk-cube:before {
 	content: '';
 	position: absolute;
@@ -162,44 +174,53 @@ a:hover{
 	-ms-transform-origin: 100% 100%;
 	transform-origin: 100% 100%;
 }
+
 .sk-folding-cube .sk-cube2 {
 	-webkit-transform: scale(1.1) rotateZ(90deg);
 	transform: scale(1.1) rotateZ(90deg);
 }
+
 .sk-folding-cube .sk-cube3 {
 	-webkit-transform: scale(1.1) rotateZ(180deg);
 	transform: scale(1.1) rotateZ(180deg);
 }
+
 .sk-folding-cube .sk-cube4 {
 	-webkit-transform: scale(1.1) rotateZ(270deg);
 	transform: scale(1.1) rotateZ(270deg);
 }
+
 .sk-folding-cube .sk-cube2:before {
 	-webkit-animation-delay: 0.3s;
 	animation-delay: 0.3s;
 }
+
 .sk-folding-cube .sk-cube3:before {
 	-webkit-animation-delay: 0.6s;
 	animation-delay: 0.6s;
 }
+
 .sk-folding-cube .sk-cube4:before {
 	-webkit-animation-delay: 0.9s;
 	animation-delay: 0.9s;
 }
+
 @-webkit-keyframes sk-foldCubeAngle {
 	0%, 10% {
 		-webkit-transform: perspective(140px) rotateX(-180deg);
 		transform: perspective(140px) rotateX(-180deg);
 		opacity: 0;
-	} 25%, 75% {
-			-webkit-transform: perspective(140px) rotateX(0deg);
-			transform: perspective(140px) rotateX(0deg);
-			opacity: 1;
-		} 90%, 100% {
-				-webkit-transform: perspective(140px) rotateY(180deg);
-				transform: perspective(140px) rotateY(180deg);
-				opacity: 0;
-			}
+	}
+	25%, 75% {
+		-webkit-transform: perspective(140px) rotateX(0deg);
+		transform: perspective(140px) rotateX(0deg);
+		opacity: 1;
+	}
+	90%, 100% {
+		-webkit-transform: perspective(140px) rotateY(180deg);
+		transform: perspective(140px) rotateY(180deg);
+		opacity: 0;
+	}
 }
 
 @keyframes sk-foldCubeAngle {
@@ -207,18 +228,21 @@ a:hover{
 		-webkit-transform: perspective(140px) rotateX(-180deg);
 		transform: perspective(140px) rotateX(-180deg);
 		opacity: 0;
-	} 25%, 75% {
-			-webkit-transform: perspective(140px) rotateX(0deg);
-			transform: perspective(140px) rotateX(0deg);
-			opacity: 1;
-		} 90%, 100% {
-				-webkit-transform: perspective(140px) rotateY(180deg);
-				transform: perspective(140px) rotateY(180deg);
-				opacity: 0;
-			}
+	}
+	25%, 75% {
+		-webkit-transform: perspective(140px) rotateX(0deg);
+		transform: perspective(140px) rotateX(0deg);
+		opacity: 1;
+	}
+	90%, 100% {
+		-webkit-transform: perspective(140px) rotateY(180deg);
+		transform: perspective(140px) rotateY(180deg);
+		opacity: 0;
+	}
 }
+
 /* loading 动画结束 */
 
-.pager li{
-  cursor: pointer;
+.pager li {
+	cursor: pointer;
 }

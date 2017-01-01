@@ -4,7 +4,7 @@
 	angular.module('moviecat.movie_list', ['ngRoute','moviecat.services.http'])
 		.config(['$routeProvider', function($routeProvider) {
 		  $routeProvider.when('/:category/:page?', {
-		    templateUrl: 'movie_list/view.html',
+		    templateUrl: 'movie_list/view.html?rev=@@hash',
 		    controller: 'MovieListCtrl'
 		  });
 		}])
